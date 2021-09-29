@@ -10,12 +10,13 @@
     },
     {
       "method": "GET",
-      "path": "/tasks/complete",
-      "handler": "task.findCompleted",
+      "path": "/",
+      "handler": "task.myCompletedTasks",
       "config": {
         "policies": []
       }
     },
+
     {
       "method": "GET",
       "path": "/tasks/count",
@@ -59,15 +60,7 @@
     {
       "method": "POST",
       "path": "/tasks/:id/complete",
-      "handler": "task.updateComplete",
-      "config": {
-        "policies": []
-      }
-    },
-    {
-      "method": "GET",
-      "path": "/tasks/:id/complete",
-      "handler": "task.findOneComplete",
+      "handler": "task.completeTask",
       "config": {
         "policies": []
       }
